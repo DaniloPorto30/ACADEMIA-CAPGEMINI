@@ -16,17 +16,13 @@ disponilibizado no link abaixo💡<br>
 - O usuario ja cadastrado, pode se logar no site.
 - O usuario pode criar um novo Login.
 
-![alt text](https://github.com/DaniloPorto30/ACADEMIA-CAPGEMINI/blob/main/questao1.png?raw=true)<br>
+![alt text](https://github.com/DaniloPorto30/ACADEMIA-CAPGEMINI/blob/main/questao2.png?raw=true)<br>
 
 --------------
 [3] # Questão 03.✔<br>
 
-![alt text](https://github.com/DaniloPorto30/clarke_app/blob/main/clarke-h.png?raw=true)<br>
+![alt text](https://github.com/DaniloPorto30/ACADEMIA-CAPGEMINI/blob/main/questao3.png?raw=true)<br>
 
-
-[4] A pagina fornecedores, mostra todas as opcoes de fornecedores de energia.✔<br>
-
-![alt text](https://github.com/DaniloPorto30/clarke_app/blob/main/clarke-f.png?raw=true)<br>
 ---------
 
 #informações:📌
