@@ -1,0 +1,74 @@
+<app-header></app-header>
+<div class="container-fluid">
+  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+  <div class="row">
+      <h5 id="bemvindo">Seja bem-vindo, Academia Capgemini!!</h5>
+      <hr>
+      <div class="next"><a routerLink="/questao-dois"><i class="fas fa-arrow-circle-right"></i></a></div>
+          <div class="col-md-9">
+            <div class="card">
+              <div class="text-center">
+                <h1 class="mt-5">Questão#1</h1>
+                <h5 class="mt-3">Algoritmo que mostre na tela uma escada de caractere *</h5>
+                <div class="form-floating">
+                  <input id="inputnum" [(ngModel)]="n" type="number">
+                  <label for="floatingInput">Digite um numero:</label><br>
+                  <button id="buttonbuscar" *ngIf="showbtnbuscar"(click)="buscarId()" class="btn btn-primary mx-3">Mostrar</button>
+                  <button id="buttonbuscar2" *ngIf="showbtnlimpar" (click)="fechar()" class="btn btn-success mx-3">Limpar</button>
+                </div>
+                 <p class="alert alert-primary" #meuParagrafo>{{ msg }}</p>
+             <p>{{resultado}}</p>
+             <ul>
+               <li>
+                <br> {{valorAsterisco}}
+               </li>
+              </ul>
+            </div>
+            <div class="enunciado">
+              <p><a data-bs-toggle="modal" data-bs-target="#exampleModal" href="">#Enunciado</a></p>
+
+            </div>
+          </div>
+        </div>
+
+  </div>
+
+<div class="d-flex" id="footer">
+    <ul>
+      <li><p id="footer1">powered by</p></li>
+      <li><p id="footer2">Capgemini</p></li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title center" id="exampleModalLabel">Desafio de Programação - Adecademia<span id="capgemini"> CAPGEMINI</span>.
+        </h5>
+      </div>
+      <div class="modal-body">
+        <h3># Questão 01</h3>
+       <p>Escreva um algoritmo que mostre na tela uma escada de tamanho n utilizando o caractere * e espaços.<br> A base e altura da escada devem ser iguais ao valor de n. A última linha não deve conter nenhum espaço.</p>
+       <h6>Exemplo:</h6>
+       <p>Entrada:</p>
+       <p>n = 6</p>
+       <p>Saída:</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<br>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<br>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***<br>
+                   &nbsp;&nbsp;&nbsp;&nbsp;****<br>
+                   &nbsp;&nbsp;&nbsp;*****<br>
+                   &nbsp;&nbsp;******
+                </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Sair</button>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

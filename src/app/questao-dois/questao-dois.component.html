@@ -1,0 +1,87 @@
+<app-header></app-header>
+<div class="container-fluid">
+  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+  <div class="row">
+    <h5 id="bemvindo">Seja bem-vindo, Academia Capgemini!!</h5>
+    <hr />
+    <div class="setas">
+    <div class="back">
+      <a routerLink="/questao-um"><i class="fas fa-arrow-circle-left"></i></a>
+    </div>
+    <div class="next">
+      <a routerLink="/questao-tres"><i class="fas fa-arrow-circle-right"></i></a>
+    </div>
+  </div>
+    <div class="col-md-9">
+      <div class="card">
+        <div class="text-center">
+          <h1 class="mt-5">Questão#2</h1>
+          <h5 class="mt-3">Type Script Validador de Senha!</h5>
+          <form class="mt-4">
+            Login:
+            <input
+              id="login"
+              type="text"
+              name="login"
+              #loginname
+              (keyup)="login($event)"
+              maxlength="30"
+            /><br /><br />
+            Senha:
+            <input
+              id="senha"
+              type="text"
+              name="senhaForca"
+              #senhaForca
+              (keyup)="validar($event)"
+              maxlength="6"
+            /><br /><br />
+            <p id="forca">Força da Senha: {{ forca }}% {{ intensidade }}</p>
+            <p class="alert alert-primary" #meuParagrafo>{{ msg }}</p>
+          </form>
+      </div>
+      <div class="enunciado">
+        <p><a data-bs-toggle="modal" data-bs-target="#exampleModal" href="">#Enunciado</a></p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="d-flex" id="footer">
+    <ul>
+      <li><p id="footer1">powered by</p></li>
+      <li><p id="footer2">Capgemini</p></li>
+    </ul>
+  </div>
+  <router-outlet></router-outlet>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title center" id="exampleModalLabel">Desafio de Programação - Adecademia<span id="capgemini"> CAPGEMINI</span>.
+        </h5>
+      </div>
+      <div class="modal-body">
+        <h3># Questão 02</h3>
+       <p>Débora se inscreveu em uma rede social para se manter em contato com seus amigos.<br> A página de cadastro exigia o preenchimento dos campos de nome e senha, porém a senha precisa ser forte.<br> O site considera uma senha forte quando ela satisfaz os seguintes critérios:
+      </p>
+       <p>Possui no mínimo 6 caracteres.<br>
+         Contém no mínimo 1 digito.<br>
+         Contém no mínimo 1 letra em minúsculo.<br>
+         Contém no mínimo 1 letra em maiúsculo.<br>
+         Contém no mínimo 1 caractere especial. Os caracteres especiais são: !@#$%^&*()-+</p>
+      <h6>Entrada:</h6>
+      <p>Ya3</p>
+      <h6>Saida:</h6>
+      <p>3</p>
+      <h5>Explicação:</h5>
+      <p>Ela pode tornar a senha segura adicionando 3 caracteres, por exemplo, &ab, transformando a senha em Ya3&ab.<br> 2 caracteres não são suficientes visto que a senha precisa ter um tamanho mínimo de 6 caracteres.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Sair</button>
+      </div>
+    </div>
+  </div>
+</div>
