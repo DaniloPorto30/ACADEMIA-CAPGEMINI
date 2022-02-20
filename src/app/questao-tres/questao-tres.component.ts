@@ -9,12 +9,14 @@ export class QuestaoTresComponent implements OnInit {
 
   msg: string = "Informação sobre o Anagrama:";
   palavra: string = "";
-
+resultado: string ="";
     constructor() { }
 
   ngOnInit(): void {}
 
   buscarletras(){
-
+ let resultado = this.palavra;
+ console.log(resultado, resultado.split('').reverse().join('')==resultado);
+ console.log(resultado.split(''));
 }
 }

@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class QuestaoUmComponent implements OnInit {
 
  i: any; j: any; n: any;
+ valorAgora : any;
+ valorAsterisco: any;
+  resultAsterisco: any;
 
-  valorAsterisco: any;
   valor: string = "";
   resultado: string = "";
   msg: string = "Resultado:";
@@ -41,16 +43,26 @@ export class QuestaoUmComponent implements OnInit {
       this.showbtnbuscar = false;
     }
 
-    for(var i = 1; i <= this.n; i++){
-      for(var j = this.n - i; j >= 1; j--) // imprimir os espaços
-      asterisco += (" ");
-      asterisco += ("\n");
-      for(var j = 1; j <= i; j++) // imprimir os *
-      asterisco += "*";
-
-      this.valorAsterisco = asterisco;
-      this.resultado = this.n;
-    }
-    this.n ="";
-   }
+  this.resultAsterisco = this.arvore(this.n);
+  console.log(this.resultAsterisco);
   }
+
+  arvore(n:number):string {
+  let result: any = [];
+    let saida = "";
+    for (let i = 1; i<= n; i++){
+        let l = n - i;
+        for(let j = 1; j <= n; j++){
+            if( l > 0){
+                saida += " "
+                l--;
+            }else{
+                saida += "*"
+            }
+        }
+        result.push(saida);
+        saida += '\n';
+    }
+    return saida ;
+}
+}
