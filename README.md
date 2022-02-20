@@ -1,5 +1,34 @@
 # Capgemini
 
+* Nesse projeto foi desenvolvido uma site para o DESAFIO DE PROGRAMAÇÃO - ACADEMIA CAPGEMINI.<br> 
+
+- O Tema do projeto foi livre porém abordando algumas exigências.💻<br>
+disponilibizado no link abaixo💡<br>
+
+----------------
+#[1] # Questão 01 !".🚀<br>
+
+
+![alt text](https://github.com/DaniloPorto30/ACADEMIA-CAPGEMINI/blob/main/questao1.png?raw=true)<br>
+
+----------------
+#[2] # Questão 02 .🏆<br>
+- O usuario ja cadastrado, pode se logar no site.
+- O usuario pode criar um novo Login.
+
+![alt text](https://github.com/DaniloPorto30/ACADEMIA-CAPGEMINI/blob/main/questao2.png?raw=true)<br>
+
+--------------
+[3] # Questão 03.✔<br>
+
+![alt text](https://github.com/DaniloPorto30/ACADEMIA-CAPGEMINI/blob/main/questao3.png?raw=true)<br>
+
+---------
+
+#informações:📌
+
+Foi utilizado :💻 HTML / CSS / TYPE SCRIPT.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.13.
 
 ## Development server
