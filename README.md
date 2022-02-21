@@ -29,6 +29,8 @@ disponilibizado no link abaixo💡<br>
 
 Foi utilizado :💻 HTML / CSS / TYPE SCRIPT.
 
+clone o projeto e de um npm install no terminal do projeto.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.13.
 
 ## Development server
