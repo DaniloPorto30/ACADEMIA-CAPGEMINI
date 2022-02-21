@@ -38,11 +38,12 @@
           </div>
           <p class="alert alert-primary" #meuParagrafo>{{ msg }}</p>
           <p>{{ resultado }}</p>
-          <ul>
-            <li >
-            </li>
-          </ul>
-          <div> {{ resultAsterisco }}</div>
+        </div>
+
+        <div class="asterisco">
+          <div *ngFor="let valor of resultAsterisco">
+            {{valor}}
+          </div>
         </div>
         <div class="enunciado">
           <p>
@@ -109,4 +110,5 @@
     </div>
   </div>
 </div>
+
 <router-outlet></router-outlet>

@@ -7,16 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestaoTresComponent implements OnInit {
 
-  msg: string = "Informação sobre o Anagrama:";
+  msg: string = "Informação sobre o Anagrama: Exercicio incompleto! ( console ) ";
   palavra: string = "";
-resultado: string ="";
+  resultado: string ="";
     constructor() { }
 
   ngOnInit(): void {}
 
-  buscarletras(){
- let resultado = this.palavra;
- console.log(resultado, resultado.split('').reverse().join('')==resultado);
- console.log(resultado.split(''));
-}
+  buscarAnagrama(){
+
+    let p =  this.palavra;
+    let pr = p.split('').reverse();
+    console.log(pr);
+
+   }
 }

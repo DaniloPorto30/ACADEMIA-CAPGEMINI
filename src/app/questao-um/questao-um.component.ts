@@ -3,66 +3,60 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-questao-um',
   templateUrl: './questao-um.component.html',
-  styleUrls: ['./questao-um.component.scss']
+  styleUrls: ['./questao-um.component.scss'],
 })
 export class QuestaoUmComponent implements OnInit {
-
- i: any; j: any; n: any;
- valorAgora : any;
- valorAsterisco: any;
+  i: any;
+  j: any;
+  n: any;
+  valorAsterisco: any;
   resultAsterisco: any;
-
-  valor: string = "";
-  resultado: string = "";
-  msg: string = "Resultado:";
+  saida = '';
+  valor: string = '';
+  resultado: string = '';
+  msg: string = 'Resultado:';
   showbtnlimpar!: boolean;
   showbtnbuscar!: boolean;
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     this.showbtnbuscar = true;
   }
 
-  fechar(){
-    if((this.n <= 0) && (this.showbtnlimpar = true)){
-      this.showbtnlimpar = false;
+  fechar() {
+    if (this.n > 0 && (this.showbtnlimpar = true)) {
       this.showbtnbuscar = true;
-    }
-
-    this.valorAsterisco = "";
-    this.resultado = "";
-  }
-
-  buscarId(){
-    let asterisco= '';
-    if ((this.n <= 0) && (this.showbtnbuscar = true)){
       this.showbtnlimpar = false;
+      this.resultAsterisco = '';
+      this.n = '';
     }
-    if((this.n >= 0) && (this.showbtnbuscar = true)){
+    this.resultAsterisco = this.arvore(this.n);
+    console.log(this.arvore(this.n));
+  }
+  buscarId() {
+    if (this.n > 0 && (this.showbtnbuscar = true)) {
       this.showbtnlimpar = true;
       this.showbtnbuscar = false;
     }
-
-  this.resultAsterisco = this.arvore(this.n);
-  console.log(this.resultAsterisco);
+    this.resultAsterisco = this.arvore(this.n);
+    console.log(this.arvore(this.n));
   }
+  arvore(n: number): string {
+    let result: any = [];
 
-  arvore(n:number):string {
-  let result: any = [];
-    let saida = "";
-    for (let i = 1; i<= n; i++){
-        let l = n - i;
-        for(let j = 1; j <= n; j++){
-            if( l > 0){
-                saida += " "
-                l--;
-            }else{
-                saida += "*"
-            }
+    for (let i = 1; i <= n; i++) {
+      let whiteEspace = n - i;
+      for (let j = 1; j <= n; j++) {
+        if (whiteEspace > 0) {
+          this.saida += ' ';
+          whiteEspace--;
+        } else {
+          this.saida += '*';
         }
-        result.push(saida);
-        saida += '\n';
+      }
+      result.push(this.saida);
+      this.saida = '';
     }
-    return saida ;
-}
+    return result;
+  }
 }
